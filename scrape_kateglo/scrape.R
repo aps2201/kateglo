@@ -4,7 +4,7 @@ library(rvest)
 pertama=1
 akhir=1446
 ls_html = lapply(
-  1:10,function(x) {
+  pertama:akhir,function(x) {
     l = read_html(paste0("http://kateglo.com/?&op=1&phrase=&lex=&type=&src=&mod=dictionary&srch=Cari&p=",x))
     Sys.sleep(5)
     l
