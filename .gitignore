@@ -1,3 +1,7 @@
 /config/config.php
 /cache
 !.gitkeep
+.Rproj.user
+.RData
+.Rhistory
+.directory
