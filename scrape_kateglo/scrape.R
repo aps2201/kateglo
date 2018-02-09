@@ -1,6 +1,4 @@
-library(dplyr)
-library(readr)
-library(rvest)
+source("require.R")
 pertama=1
 akhir=1446
 ls_html = lapply(
