@@ -1,20 +1,22 @@
 library(dplyr)
 library(readr)
 library(rvest)
+pertama=1
+akhir=1446
 ls_html = lapply(
-  1:1446,function(x) {
+  1:10,function(x) {
     l = read_html(paste0("http://kateglo.com/?&op=1&phrase=&lex=&type=&src=&mod=dictionary&srch=Cari&p=",x))
     Sys.sleep(5)
     l
   }
 )
 
-a = lapply(1:1446, function(x) {
+a = lapply(pertama:akhir, function(x) {
   html_nodes(ls_html[[x]],"dt") %>% 
     html_text()
 }
 )
-b = lapply(1:1446, function(x) {
+b = lapply(pertama:akhir, function(x) {
   html_nodes(ls_html[[x]],"dd") %>% 
     html_text()
 }
